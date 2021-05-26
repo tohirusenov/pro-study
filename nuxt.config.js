@@ -17,6 +17,15 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    // fonts
+    "~/assets/fonts/montserrat/stylesheet.css",
+    "~/assets/fonts/nunito/stylesheet.css",
+    // icons
+    "~/assets/fonts/icomoon/style.css",
+    "~/assets/fonts/fontawesome/css/font-awesome.min",
+    // css
+    "~/assets/css/style.css",
+    "~/assets/css/media.css",
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

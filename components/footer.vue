@@ -1,7 +1,5 @@
 <template>
-  <main class="inner-wrapper">
-    <h1>toxa</h1>
-  </main>
+  <footer><div class="container">toxa</div></footer>
 </template>
 
 <script>
