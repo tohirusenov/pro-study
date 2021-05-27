@@ -1,5 +1,5 @@
 <template>
-  <footer><div class="container">toxa</div></footer>
+  <footer><div class="container"></div></footer>
 </template>
 
 <script>
