@@ -53,22 +53,6 @@ h6 {
     cursor: pointer;
 }
 
-/* 
-.own-navbar {
-    width: 35px;
-    height: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-.own-navbar span {
-    width: 100%;
-    height: 1.5px;
-    background-color: white;
-} */
-
 .header {
     padding: 37px 0;
 }
@@ -402,17 +386,17 @@ h6 {
 
 
 
-.swiper-container {
+.teachers .swiper-container {
     padding-bottom: 55px;
 }
 
-.swiper-button-next {
+.teachers .swiper-button-next {
 
     right: 50%;
     transform: translateX(calc(100% + 8px));
 }
 
-.swiper-button-prev {
+.teachers .swiper-button-prev {
 
     left: 50%;
     transform: translateX(calc(-100% - 8px));
@@ -420,8 +404,8 @@ h6 {
 
 }
 
-.swiper-button-prev,
-.swiper-button-next {
+.teachers .swiper-button-prev,
+.teachers .swiper-button-next {
     bottom: 0;
     width: unset;
     top: unset;
@@ -456,4 +440,100 @@ h6 {
 
 .teachers__header {
     margin-bottom: 70px;
+}
+
+.lifehacks__wrapper {
+    background: #FBFAFA;
+    border-radius: 40px;
+    padding: 0 100px;
+    min-height: 500px;
+    padding: 35px;
+}
+
+.lifehacks__left {
+    width: 561px;
+}
+
+.lifehacks__left h2 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.045em;
+    color: #000000;
+
+}
+
+.lifehacks__carousel {
+    background: #FBFAFA;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+
+    padding: 35px;
+}
+
+.lifehack__carousel__item {
+    display: flex;
+    flex-direction: column;
+    min-height: 195px;
+}
+
+
+.lifehack__carousel__item__bottom {
+    margin-top: auto;
+}
+
+.lifehack__carousel__item p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 0;
+    color: #000000;
+
+}
+
+.lifehack__carousel__item__bottom__info {
+    margin-left: 10px;
+}
+
+.lifehack__carousel__item__bottom__image {
+    width: 52px;
+    height: 52px;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+}
+
+.lifehack__carousel__item__bottom__image img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.lifehack__carousel__item__bottom {
+    display: flex;
+    align-items: center;
+}
+
+.lifehack__carousel__item__bottom h3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+    letter-spacing: 0.045em;
+
+    color: #000000;
+
+}
+
+.lifehack__carousel__item__bottom h4 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.045em;
+    color: rgba(0, 0, 0, 0.8);
 }

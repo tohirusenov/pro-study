@@ -76,40 +76,18 @@
         </div>
       </div>
     </section>
-    <section class="lifehack">
+    <section class="lifehacks">
       <div class="container">
-        <div class="lifehack__wrapper">
-          <div class="lifehack__left">
+        <div class="lifehacks__wrapper">
+          <div class="lifehacks__left">
             <h2>Изучай лайфхаки и пользуйся будущим</h2>
+            <div class="lifehacks__carousel">
+              <client-only>
+                <Lifehacks />
+              </client-only>
+            </div>
           </div>
-          <div class="lifehack__carousel">
-            <client-only>
-              <div
-                v-swiper="lifehackSlider"
-                class="w-5/6 ml-auto relative"
-                :loadtheme="false"
-              >
-                <div class="swiper-wrapper">
-                  <div
-                    class="swiper-slide"
-                    v-for="(lifehack, index) in lifehacks"
-                    :key="index"
-                  >
-                    <div class="lifehack__carousel__item">
-                      <p>{{ lifehack.text }}</p>
-                      <div class="lifehack__carousel__item__bottom">
-                        <div class="lifehack__carousel__item__bottom__image">
-                          <img :src="lifehack.image" alt="not found" />
-                        </div>
-                        <h3>{{ lifehack.name }}</h3>
-                        <h4>{{ lifehack.jobName }}</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </client-only>
-          </div>
+          <div class="lifehacks__right"></div>
         </div>
       </div>
     </section>
@@ -121,29 +99,7 @@
           </div>
           <div class="teachers__main">
             <client-only>
-              <div
-                v-swiper="teacherSlider"
-                class="w-5/6 ml-auto relative"
-                :loadtheme="false"
-              >
-                <div class="swiper-wrapper">
-                  <div
-                    class="swiper-slide"
-                    :key="index"
-                    v-for="(teacher, index) in teachers"
-                  >
-                    <div class="teachers__item">
-                      <div class="teachers__item__image">
-                        <img :src="teacher.image" alt="not found" />
-                      </div>
-                      <h3>{{ teacher.name }}</h3>
-                      <h4>{{ teacher.jobName }}</h4>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-button-prev" slot="button-prev"></div>
-                <div class="swiper-button-next" slot="button-next"></div>
-              </div>
+              <Teachers />
             </client-only>
           </div>
         </div>
@@ -153,32 +109,9 @@
 </template>
   
 <script>
-import { directive } from "vue-awesome-swiper";
 export default {
-  directives: {
-    swiper: directive,
-  },
   data() {
     return {
-      // carousel
-
-      teacherSlider: {
-        slidesPerView: 3,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      },
-      lifehackSlider: {
-        slidesPerView: 2,
-      },
-
       // arrays
       // discount
       discounts: [
@@ -242,60 +175,14 @@ export default {
         },
       ],
       // ==
-      // teachers
-      teachers: [
-        {
-          image: require("~/assets/images/teacher1.jpg"),
-          name: "Коул Александр",
-          jobName: "Web design",
-        },
-        {
-          image: require("~/assets/images/teacher2.jpg"),
-          name: "Александр",
-          jobName: "Back-End",
-        },
-        {
-          image: require("~/assets/images/teacher3.jpg"),
-          name: "Юрий Михайлов",
-          jobName: "Front-End",
-        },
-        {
-          image: require("~/assets/images/teacher4.jpg"),
-          name: "Акмал",
-          jobName: "Web design",
-        },
-        {
-          image: require("~/assets/images/teacher3.jpg"),
-          name: "Tohir Usenov",
-          jobName: "Front-end",
-        },
-      ],
-      // ====
-      // lifehack
-      lifehacks: [
-        {
-          image: require("~/assets/images/lifehack1.png"),
-          name: "Tohir",
-          jobName: "Front-end Developer",
-          text:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur rem ex cum adipisci excepturi quasi, sit rerum aperiam hic nobis corporis consequuntur beatae impedit repellendus vero eius quibusdam, laboriosam nihil.",
-        },
-        {
-          image: require("~/assets/images/lifehack2.png"),
-          name: "Akmal",
-          jobName: "Web Design",
-          text:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur rem ex cum adipisci excepturi quasi, sit rerum aperiam hic nobis corporis consequuntur beatae impedit repellendus vero eius quibusdam, laboriosam nihil.",
-        },
-      ],
-
-      // education
     };
   },
   components: {
     course: () => import("~/components/course"),
     discount: () => import("~/components/discount"),
-    // VueSlickCarousel,
+    // Carousels
+    Lifehacks: () => import("~/components/carousels/lifehacks"),
+    Teachers: () => import("~/components/carousels/teachers"),
   },
 };
 </script>
