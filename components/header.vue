@@ -8,25 +8,25 @@
           </nuxt-link>
         </div>
         <div class="header__navbar">
-          <i class="own-navbar">
-            <span></span>
-            <span></span>
-            <span></span>
+          <i class="icon-navbar">
+         
           </i>
         </div>
         <div class="header__menu">
           <ul>
-            <li v-for="(item, index) in menu" :key="index">
-              <nuxt-link :to="item.href">
-                {{ item.name }}
-              </nuxt-link>
-            </li>
+            <client-only>
+              <li v-for="(item, index) in menu" :key="index">
+                <nuxt-link :to="item.href">
+                  {{ item.name }}
+                </nuxt-link>
+              </li>
+            </client-only>
           </ul>
         </div>
         <div class="header__links">
           <a href="#!">
             <i class="icon-pin"></i>
-           <span> ул. Узбекистон Овози, 21</span>
+            <span> ул. Узбекистон Овози, 21</span>
           </a>
           <a href="tel:+998787770008">
             <i class="icon-tel"></i>
@@ -45,10 +45,6 @@ export default {
       // arrays
       // main menu
       menu: [
-        {
-          name: "О нас",
-          href: "/about",
-        },
         {
           name: "Все курсы",
           href: "/courses",
