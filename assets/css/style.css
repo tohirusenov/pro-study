@@ -442,16 +442,27 @@ h6 {
     margin-bottom: 70px;
 }
 
+.lifehacks {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
 .lifehacks__wrapper {
     background: #FBFAFA;
     border-radius: 40px;
-    padding: 0 100px;
-    min-height: 500px;
-    padding: 35px;
+    padding: 0px 100px;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .lifehacks__left {
-    width: 561px;
+    padding-top: 95px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .lifehacks__left h2 {
@@ -468,22 +479,23 @@ h6 {
     background: #FBFAFA;
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
     border-radius: 24px;
-
+    margin-top: auto;
     padding: 35px;
+    margin-bottom: -100px;
 }
 
-.lifehack__carousel__item {
+.lifehacks__carousel__item {
     display: flex;
     flex-direction: column;
     min-height: 195px;
 }
 
 
-.lifehack__carousel__item__bottom {
+.lifehacks__carousel__item__bottom {
     margin-top: auto;
 }
 
-.lifehack__carousel__item p {
+.lifehacks__carousel__item p {
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
@@ -492,11 +504,11 @@ h6 {
 
 }
 
-.lifehack__carousel__item__bottom__info {
+.lifehacks__carousel__item__bottom__info {
     margin-left: 10px;
 }
 
-.lifehack__carousel__item__bottom__image {
+.lifehacks__carousel__item__bottom__image {
     width: 52px;
     height: 52px;
     object-fit: cover;
@@ -504,19 +516,19 @@ h6 {
     overflow: hidden;
 }
 
-.lifehack__carousel__item__bottom__image img {
+.lifehacks__carousel__item__bottom__image img {
     width: 100%;
     height: 100%;
     object-position: center;
     object-fit: cover;
 }
 
-.lifehack__carousel__item__bottom {
+.lifehacks__carousel__item__bottom {
     display: flex;
     align-items: center;
 }
 
-.lifehack__carousel__item__bottom h3 {
+.lifehacks__carousel__item__bottom h3 {
     font-family: 'Nunito', sans-serif;
     font-weight: 600;
     font-size: 16px;
@@ -529,7 +541,7 @@ h6 {
 
 }
 
-.lifehack__carousel__item__bottom h4 {
+.lifehacks__carousel__item__bottom h4 {
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -537,3 +549,435 @@ h6 {
     letter-spacing: 0.045em;
     color: rgba(0, 0, 0, 0.8);
 }
+
+.lifehacks .swiper-pagination {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: unset;
+    width: auto;
+}
+
+.lifehacks .swiper-container {
+    position: relative;
+}
+
+.lifehacks .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 0 0 7px;
+    background: none;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #000000;
+}
+
+.lifehacks .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet:first-child {
+    margin-left: 0;
+}
+
+.lifehacks .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #000000;
+}
+
+.lifehacks__right {
+    width: 310px;
+    margin-right: 130px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.lifehacks__right ul {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    width: 100%;
+    height: 312px;
+    flex-wrap: wrap;
+}
+
+.lifehacks__right ul li {
+    box-shadow: 0px 0px 10px rgba(122, 0, 235, 0.2);
+    border-radius: 52px;
+    width: 52px;
+    height: 156px;
+    position: relative;
+}
+
+.lifehacks__image {
+    width: 52px;
+    height: 52px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: absolute;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.lifehacks__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.lifehacks__right ul li::after {
+    content: '';
+    position: absolute;
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+.lifehacks__right ul li:nth-child(1) {
+    background: #88A5AD;
+    transform: translateY(-46px);
+    transition: all 0.3s ease-in-out;
+}
+
+.lifehacks__right ul li:nth-child(2) {
+    background: linear-gradient(180deg, #201F24 -43.89%, #DAD2E1 100%);
+    transform: translateY(-46px);
+
+}
+
+.lifehacks__right ul li:nth-child(3) {
+    background: #DC2625;
+    transform: translateY(-48px);
+
+}
+
+.lifehacks__right ul li:nth-child(4) {
+    background: #453C4D;
+    transform: translateY(37px);
+
+}
+
+.lifehacks__right ul li:nth-child(5) {
+    background: #9BA2A4;
+    transform: translateY(-152px);
+}
+
+.lifehacks__right ul li:nth-child(6) {
+    background: #587E88;
+    transform: translateY(143px);
+}
+
+.lifehacks__right ul li:nth-child(7) {
+    background: #DC2625;
+    transform: translateY(17px);
+}
+
+.lifehacks__right ul li:nth-child(8) {
+    background: #453C4D;
+    transform: translateY(17px);
+}
+
+
+
+/* child1 */
+
+@keyframes child1Image {
+    0% {
+        transform: translateY(200%)
+    }
+
+    100% {
+        transform: translateY(-100%)
+    }
+}
+
+@keyframes child1After {
+    0% {
+        transform: translateY(-100%)
+    }
+
+    100% {
+        transform: translateY(200%)
+    }
+}
+
+.lifehacks__right ul li:nth-child(1) .lifehacks__image {
+    transform: translateY(200%);
+    animation-name: child1Image;
+
+}
+
+.lifehacks__right ul li:nth-child(1)::after {
+    background: #4AD4F9;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-100%);
+    animation-name: child1After;
+}
+
+
+/* child1 */
+/* child2 */
+
+@keyframes child2Image {
+
+    0% {
+        transform: translateY(50%);
+    }
+
+    100% {
+        transform: translateY(-200%);
+    }
+
+}
+
+@keyframes child2After {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(250%);
+    }
+
+}
+
+.lifehacks__right ul li:nth-child(2) .lifehacks__image {
+    bottom: 0;
+    transform: translateY(50%);
+    animation-name: child2Image;
+}
+
+.lifehacks__right ul li:nth-child(2)::after {
+    background: #B97EF2;
+    animation-name: child2After;
+}
+
+/* child2 */
+/* child3 */
+@keyframes child3Image {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(250%);
+    }
+
+}
+
+@keyframes child3After {
+    0% {
+        transform: translateY(50%);
+    }
+
+    100% {
+        transform: translateY(-200%);
+    }
+}
+
+.lifehacks__right ul li:nth-child(3)::after {
+    background: linear-gradient(180deg, #0C0169 -25.96%, #3CC9F0 100%);
+    bottom: 0;
+    transform: translateY(50%);
+    animation-name: child3After;
+}
+
+
+.lifehacks__right ul li:nth-child(3) .lifehacks__image {
+    animation-name: child3Image;
+}
+
+/* child3 */
+
+/* child4 */
+@keyframes child4After {
+    0% {
+        transform: translateY(100%);
+
+    }
+
+    100% {
+        transform: translateY(-200%);
+    }
+
+}
+
+@keyframes child4Image {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(300%);
+    }
+
+}
+
+.lifehacks__right ul li:nth-child(4)::after {
+
+    background: linear-gradient(180deg, #7A00EB 0%, #DC2625 100%);
+    bottom: 0;
+    transform: translateY(100%);
+    animation-name: child4After;
+}
+
+.lifehacks__right ul li:nth-child(4) .lifehacks__image {
+    animation-name: child4Image;
+}
+
+/* child4 */
+
+/* child5 */
+@keyframes child5Image {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(300%);
+    }
+}
+
+@keyframes child5After {
+    0% {
+        transform: translateY(100%);
+
+    }
+
+    100% {
+        transform: translateY(-200%);
+    }
+}
+
+.lifehacks__right ul li:nth-child(5)::after {
+    background: linear-gradient(180deg, #7A00EB 0%, #B97EF2 100%);
+    bottom: 0;
+    transform: translateY(100%);
+    animation-name: child5After;
+}
+
+.lifehacks__right ul li:nth-child(5) .lifehacks__image {
+    animation-name: child5Image;
+}
+
+/* child5 */
+
+/* child6 */
+@keyframes child6Image {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-300%);
+    }
+}
+
+@keyframes child6After {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(200%);
+    }
+}
+
+.lifehacks__right ul li:nth-child(6)::after {
+    background: #dce35b;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dce35b, #45b649);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #dce35b, #45b649);
+    transform: translateY(-100%);
+    animation-name: child6After;
+}
+
+.lifehacks__right ul li:nth-child(6) .lifehacks__image {
+    bottom: 0;
+    animation-name: child6Image;
+
+}
+
+/* child6 */
+/* child7 */
+@keyframes child7After {
+    0% {
+        transform: translateY(-100%);
+
+    }
+
+    100% {
+        transform: translateY(200%);
+    }
+
+}
+
+@keyframes child7Image {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-300%);
+    }
+}
+
+.lifehacks__right ul li:nth-child(7)::after {
+    background: #8360c3;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8360c3, #2ebf91);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8360c3, #2ebf91);
+    transform: translateY(-100%);
+    animation-name: child7After;
+}
+
+.lifehacks__right ul li:nth-child(7) .lifehacks__image {
+    bottom: 0;
+    animation-name: child7Image;
+}
+
+/* child7 */
+/* child8 */
+@keyframes child8Image {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-200%);
+    }
+}
+
+@keyframes child8After {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(300%);
+    }
+}
+
+
+.lifehacks__right ul li:nth-child(8)::after {
+    background: #8e2de2;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8e2de2, #4a00e0);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    animation-name: child8After;
+}
+
+.lifehacks__right ul li:nth-child(8) .lifehacks__image {
+    bottom: 0;
+    transform: translateY(100%);
+    animation-name: child8Image;
+}
+
+/* child8 */

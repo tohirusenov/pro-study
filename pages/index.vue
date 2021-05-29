@@ -7,8 +7,8 @@
             <client-only>
               <div
                 class="col-lg-6"
-                v-for="(discount, index) in discounts"
-                :key="index"
+                v-for="discount in discounts"
+                :key="discount.id"
               >
                 <nuxt-link :to="discount.href">
                   <discount
@@ -35,8 +35,8 @@
               <client-only>
                 <div
                   class="col-lg-3"
-                  v-for="(course, index) in courses"
-                  :key="index"
+                  v-for="course in courses"
+                  :key="course.id"
                 >
                   <nuxt-link :to="course.href">
                     <course :title="course.title">
@@ -64,11 +64,7 @@
       <div class="container">
         <div class="about__wrapper">
           <client-only>
-            <div
-              class="about__item"
-              v-for="(item, index) in about"
-              :key="index"
-            >
+            <div class="about__item" v-for="item in about" :key="item.id">
               <img :src="item.image" alt="not found" />
               <p v-html="item.text"></p>
             </div>
@@ -87,7 +83,15 @@
               </client-only>
             </div>
           </div>
-          <div class="lifehacks__right"></div>
+          <div class="lifehacks__right">
+            <ul>
+              <li v-for="lifehack in lifehacks" :key="lifehack.id">
+               <div class="lifehacks__image">
+                 <img :src="lifehack.image" alt="">
+               </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -116,6 +120,7 @@ export default {
       // discount
       discounts: [
         {
+          id: 1,
           title: "Графический дизайн",
           text: "Создай свой трендовый дизайн, обучаясь в наших курсах!",
           more: "Подробнее",
@@ -123,6 +128,7 @@ export default {
           image: require("~/assets/images/discount1.png"),
         },
         {
+          id: 2,
           title: "Бизнес курсы",
           text: "Регистрируйся до 31 мая и <span>30%</span> получи скидку",
           more: "Получить сейчас",
@@ -134,24 +140,28 @@ export default {
       // courses
       courses: [
         {
+          id: 1,
           title: "Graphic design",
           href: "/",
           image: require("~/assets/images/course1.jpg"),
           video: require("~/assets/images/course-gif1.gif.mp4"),
         },
         {
+          id: 2,
           title: "Frond-End",
           href: "/",
           image: require("~/assets/images/course2.jpg"),
           video: require("~/assets/images/course-gif2.gif.mp4"),
         },
         {
+          id: 3,
           title: "Back-End",
           href: "/",
           image: require("~/assets/images/course3.jpg"),
           video: require("~/assets/images/course-gif3.gif.mp4"),
         },
         {
+          id: 4,
           title: "Business Courses",
           href: "/",
           image: require("~/assets/images/course4.jpg"),
@@ -162,19 +172,57 @@ export default {
       // about
       about: [
         {
+          id: 1,
           text: "2 место ‘21<br> в рейтинге за лутшый учители",
           image: require("~/assets/images/about1.svg"),
         },
         {
+          id: 2,
           text: "3 место ‘21<br> в рейтинге за лутшый учители",
           image: require("~/assets/images/about2.svg"),
         },
         {
+          id: 3,
           text: "2 место ‘21<br> в рейтинге за лутшый учители",
           image: require("~/assets/images/about3.svg"),
         },
       ],
       // ==
+      // lifehacks
+      lifehacks: [
+        {
+          id: 1,
+          image: require("~/assets/images/lifehacks1.png"),
+        },
+        {
+          id: 2,
+          image: require("~/assets/images/lifehacks2.png"),
+        },
+        {
+          id: 3,
+          image: require("~/assets/images/lifehacks3.png"),
+        },
+        {
+          id: 4,
+          image: require("~/assets/images/lifehacks4.png"),
+        },
+        {
+          id: 5,
+          image: require("~/assets/images/lifehacks5.png"),
+        },
+        {
+          id: 6,
+          image: require("~/assets/images/lifehacks6.png"),
+        },
+        {
+          id: 7,
+          image: require("~/assets/images/lifehacks7.png"),
+        },
+        {
+          id: 8,
+          image: require("~/assets/images/lifehacks8.png"),
+        },
+      ],
     };
   },
   components: {

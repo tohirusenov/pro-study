@@ -10,13 +10,13 @@
         v-for="(lifehack, index) in lifehacks"
         :key="index"
       >
-        <div class="lifehack__carousel__item">
+        <div class="lifehacks__carousel__item">
           <p>{{ lifehack.text }}</p>
-          <div class="lifehack__carousel__item__bottom">
-            <div class="lifehack__carousel__item__bottom__image">
+          <div class="lifehacks__carousel__item__bottom">
+            <div class="lifehacks__carousel__item__bottom__image">
               <img :src="lifehack.image" alt="not found" />
             </div>
-            <div class="lifehack__carousel__item__bottom__info">
+            <div class="lifehacks__carousel__item__bottom__info">
               <h3>{{ lifehack.name }}</h3>
               <h4>{{ lifehack.jobName }}</h4>
             </div>
@@ -24,6 +24,7 @@
         </div>
       </div>
     </div>
+    <div class="swiper-pagination"></div>
   </div>
 </template>
 
@@ -43,6 +44,10 @@ export default {
           el: ".swiper-pagination",
           clickable: true,
         },
+        effect: "fade",
+        fadeEffect: { crossFade: true },
+        speed: 1500,
+        autoplay: { delay: 5000 },
       },
 
       lifehacks: [
